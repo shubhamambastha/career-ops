@@ -1,0 +1,15 @@
+<!doctype html><html><body>
+<form>
+  <label for="fn">First Name *</label><input id="fn" name="first_name" required>
+  <label for="ln">Last Name *</label><input id="ln" name="last_name" required>
+  <label>Email <input type="email" name="email" required></label>
+  <label for="ph">Phone</label><input id="ph" type="tel" name="phone">
+  <input name="urls[LinkedIn]" aria-label="LinkedIn Profile">
+  <input name="urls[Portfolio]" placeholder="Website">
+  <label for="loc">Location (City)</label><input id="loc" name="location" value="Prefilled">
+  <label for="resume">Resume/CV *</label><input id="resume" type="file" name="resume" style="display:none" required>
+  <label for="cover">Cover Letter</label><input id="cover" type="file" name="cover_letter" style="display:none">
+  <label for="why">Why do you want to work here? *</label><textarea id="why" name="why" required></textarea>
+  <button type="submit" onclick="window.__submitted = true">Submit application</button>
+</form>
+</body></html>

@@ -1,3 +1,22 @@
+# Job Radar — a UI wrapper around career-ops
+
+This fork adds **[Job Radar](job-radar/)**, a local web app that sits on top of [career-ops](https://github.com/santifer/career-ops) and gives its scripts and modes a UI: scrape job boards, rank every job against your profile, and run career-ops evaluations, tailored CVs, and tracking from one place.
+
+- **Jobs:** scrape any listing link (80+ ATS APIs via career-ops `providers/`, or any site with JSON-LD), score every job with editable weights, and filter, sort, and export.
+- **Career-Ops page:** AI Studio runs career-ops modes (evaluate, tailor CV, cover letter, outreach, interview prep…) through `claude -p`. Pipeline edits `data/applications.md` via `set-status.mjs`, Insights shows the stats scripts, and Scanner runs `scan.mjs`.
+- **Apply (draft-only):** Auto-fill opens the form in Playwright, fills it from `config/profile.yml`, and stops before Submit. Nothing is ever sent for you.
+
+```bash
+npm install                    # career-ops (root)
+cd job-radar && npm install
+npm run dev                    # UI on http://localhost:5173, API on :5174
+# or, from the root:  npm run radar
+```
+
+Full docs: [job-radar/README.md](job-radar/README.md). Everything below is the upstream career-ops README; the career-ops core stays unchanged, so upstream updates still apply.
+
+---
+
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/wordmark-dark.svg"><img src="docs/wordmark-light.svg" alt="career-ops" width="250" height="56"></picture></p>
 
 <table align="center">
